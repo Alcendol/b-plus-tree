@@ -151,3 +151,62 @@ doubleTree.set(1, 3.14159);
 - Prevention of memory leaks during splits and merges
 
 ## Future Enhancements
+
+- **Range Queries**: Implement iterator-based range searching using linked leaf nodes
+- **Persistence**: Add serialization/deserialization for disk storage
+- **Bulk Operations**: Implement bulk insert/delete operations
+- **Statistics**: Add tree statistics (height, node count, key count)
+- **Custom Comparators**: Support for custom key comparison functions
+- **Thread Safety**: Add thread-safe operations with proper locking
+- **Memory Pool**: Implement custom memory allocation for better performance
+
+## Performance Characteristics
+
+- **Time Complexity**:
+  - Search: O(log n)
+  - Insert: O(log n)
+  - Delete: O(log n)
+- **Space Complexity**: O(n)
+- **Tree Height**: O(log n) where n is number of keys
+
+## Testing
+
+The project includes a comprehensive demo in `main.cpp` that tests:
+- Sequential insertions
+- Tree structure visualization
+- Key lookup operations
+- Deletion operations
+- Tree rebalancing
+
+## Common Issues and Solutions
+
+### Template Compilation
+If you encounter template-related compilation errors:
+- Ensure explicit template instantiations are included
+- Check that all template methods are properly defined
+- Verify header inclusions are correct
+
+### Memory Leaks
+The implementation includes proper cleanup:
+- Destructors handle all dynamically allocated memory
+- Parent-child relationships are properly maintained
+- Sibling pointers are updated during operations
+
+### Build Errors
+If compilation fails:
+- Ensure C++17 or later compiler support
+- Check that all source files are present
+- Verify Makefile paths are correct
+
+## Contributing
+
+When contributing to this project:
+1. Maintain the modular structure
+2. Follow existing naming conventions
+3. Add appropriate template instantiations
+4. Include comprehensive error handling
+5. Update documentation for new features
+
+## License
+
+This implementation is provided as educational material and can be freely used and modified.
